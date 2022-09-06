@@ -5,7 +5,7 @@ class HeadingView extends StatelessWidget {
   final String? rightView;
 
   const HeadingView(
-      {Key? key, required this.leftTitle, this.rightView = 'View All'})
+      {Key? key, required this.leftTitle, this.rightView = 'See All'})
       : super(key: key);
 
   @override

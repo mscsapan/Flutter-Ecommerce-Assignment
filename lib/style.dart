@@ -36,9 +36,9 @@ TextStyle vieAllStyle() {
 
 TextStyle menuTitleStyle() {
   return GoogleFonts.poppins(
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w700,
     fontSize: 16.0,
-    color: mHeadingColor,
+    color: const Color(0xFF2E2E2E),
   );
   //const TextStyle(fontSize: 12.0, color: Color(0xFF9F9F9F));
 }

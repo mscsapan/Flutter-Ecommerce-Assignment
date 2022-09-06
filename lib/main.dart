@@ -15,6 +15,6 @@ class FlutterApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Home(), debugShowCheckedModeBanner: false);
+    return MaterialApp(home: Home(), debugShowCheckedModeBanner: false);
   }
 }

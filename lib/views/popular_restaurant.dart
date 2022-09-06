@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_assignment/views/discount_offer.dart';
-
-import '../constraints/app_color.dart';
-import '../data/popular_food_data.dart';
+import '../data/restaurant_data.dart';
 import '../style.dart';
+import 'discount_offer.dart';
 
-class CampaignFood extends StatelessWidget {
-  const CampaignFood({Key? key}) : super(key: key);
+class PopularRestaurantList extends StatelessWidget {
+  final String message;
 
+  const PopularRestaurantList({Key? key, this.message = '30% Off'})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 240.0,
+      height: 220.0,
       width: double.infinity,
       child: ListView.builder(
-        itemCount: titile.length,
+        itemCount: title.length,
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         itemBuilder: (context, index) {
           return Container(
-            height: 210.0,
+            height: 180.0,
             width: 180.0,
             margin: const EdgeInsets.symmetric(horizontal: 6.0),
             decoration: BoxDecoration(
@@ -27,6 +27,7 @@ class CampaignFood extends StatelessWidget {
                 border: Border.all(color: const Color(0xFFD9D9D9)),
                 borderRadius: BorderRadius.circular(4.0)),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
                   height: 140.0,
@@ -37,7 +38,7 @@ class CampaignFood extends StatelessWidget {
                         topRight: Radius.circular(4.0)),
                     child: Stack(
                       children: [
-                        Image.asset(image[index],
+                        Image.asset(images[index],
                             fit: BoxFit.cover, height: 140.0, width: 180.0),
                         Positioned(
                           top: 8.0,
@@ -48,14 +49,16 @@ class CampaignFood extends StatelessWidget {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4.0),
                                 color: const Color(0xFFFFFFFF)),
-                            child: const Icon(Icons.favorite_outlined,
-                                size: 20.0, color: Colors.red),
+                            child: Icon(Icons.favorite_outlined,
+                                size: 20.0,
+                                color:
+                                    index % 2 == 1 ? Colors.grey : Colors.red),
                           ),
                         ),
                         const Positioned(
                             top: 8.0,
                             right: 8.0,
-                            child: DiscountOffer(message: '54%')),
+                            child: DiscountOffer(message: '-54%')),
                       ],
                     ),
                   ),
@@ -68,52 +71,35 @@ class CampaignFood extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(cat[index], style: subTitleStyle()),
+                          Text('Comilla', style: subTitleStyle()),
                           Row(
                             children: const [
-                              Icon(Icons.star, size: 18.0, color: mActiveColor),
-                              Text('3.5')
+                              Icon(Icons.star,
+                                  size: 18.0, color: Color(0xFFF54748)),
+                              Text(
+                                '3.5',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              )
                             ],
                           ),
                         ],
                       ),
-                      Text(titile[index],
-                          overflow: TextOverflow.ellipsis,
-                          style: menuTitleStyle()),
-                      Row(
-                        children: [
-                          Row(
-                            children: [
-                              Text('\$${19.50}', style: menuTitleStyle()),
-                              const SizedBox(width: 10.0),
-                              Text(
-                                '\$${50.0}',
-                                style: discountStyle(),
-                              )
-                            ],
-                          ),
-                          //const SizedBox(width: 10.0),
-                          // Icon(Icons.add, size: 32.0),
-                          Container(
-                            height: 35.0,
-                            width: 35.0,
-                            margin:
-                                const EdgeInsets.only(top: 12.0, left: 40.0),
-                            decoration: const BoxDecoration(
-                              color: Color(0xFFF54748),
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                bottomRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            child: const Icon(Icons.add,
-                                size: 32.0, color: Colors.white),
-                          )
-                        ],
+                      Text(
+                        title[index],
+                        overflow: TextOverflow.ellipsis,
+                        style: menuTitleStyle(),
                       ),
                     ],
                   ),
                 ),
+                const Text(
+                  '134 Items',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18.0,
+                      color: Color(0xFFF54748),
+                      decoration: TextDecoration.underline),
+                )
               ],
             ),
           );
