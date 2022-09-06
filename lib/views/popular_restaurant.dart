@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data/restaurant_data.dart';
-import '../style.dart';
+import '../style/style.dart';
 import 'discount_offer.dart';
 
 class PopularRestaurantList extends StatelessWidget {

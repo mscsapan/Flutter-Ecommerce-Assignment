@@ -3,7 +3,7 @@ import 'package:flutter_assignment/views/discount_offer.dart';
 
 import '../constraints/app_color.dart';
 import '../data/popular_food_data.dart';
-import '../style.dart';
+import '../style/style.dart';
 
 class CampaignFood extends StatelessWidget {
   const CampaignFood({Key? key}) : super(key: key);

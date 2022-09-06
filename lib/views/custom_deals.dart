@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/others_data.dart';
-import '../style.dart';
+import '../style/style.dart';
 
 class CustomDeals extends StatelessWidget {
   const CustomDeals(

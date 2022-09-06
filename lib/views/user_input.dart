@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment/views/heading_view.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({Key? key}) : super(key: key);
@@ -36,11 +37,12 @@ class SearchTextField extends StatelessWidget {
           Container(
             height: 52.0,
             width: 44.0,
+            alignment: Alignment.center,
             margin: const EdgeInsets.only(left: 5.0),
             decoration: BoxDecoration(
-                color: Color(0xFFF54748),
+                color: const Color(0xFFF54748),
                 borderRadius: BorderRadius.circular(4.0)),
-            child: Icon(Icons.menu_open_rounded, color: Colors.white),
+            child: const MenuIcon(),
           ),
         ],
       ),

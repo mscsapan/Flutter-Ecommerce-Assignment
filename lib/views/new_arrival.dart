@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/arrival_data.dart';
 import '../model/new_arrival_model.dart';
-import '../style.dart';
+import '../style/style.dart';
 import 'discount_offer.dart';
 
 class NewArrival extends StatelessWidget {

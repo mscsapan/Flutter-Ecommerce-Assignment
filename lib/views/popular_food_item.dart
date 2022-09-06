@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constraints/app_color.dart';
-import '../style.dart';
+import '../style/style.dart';
 import 'discount_offer.dart';
 
 class PopularFoodItem extends StatelessWidget {

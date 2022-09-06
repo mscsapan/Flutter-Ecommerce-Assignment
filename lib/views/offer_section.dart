@@ -8,7 +8,6 @@ class OfferSection extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 0.2,
-      width: size.width,
       margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 24.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4.0),
